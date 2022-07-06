@@ -16,13 +16,26 @@ public class Main {
                         "04140469124990\tBusiness\tMatrix Limited\tSortCodeAccountNumber",
                         "04140459124221\tPersonal\tMrs Penny Jones\tSortCodeAccountNumber");
 
-          for(int i = 0; i<inputList.size(); i++) {
-              if (inputList.get(i).contains(s)) {
-                  System.out.println(inputList.get(i));
-                  return inputList.get(i);
-              }
-          }
-          return null;
+        for (int i = 0; i < inputList.size(); i++) {
+            if (inputList.get(i).contains(s)) {
+                return inputList.get(i);
+            }
+        }
+        return null;
     }
 
+    private String testRefinedCode(String s) {
+
+        final List<String> inputList =
+                Arrays.asList("04140489124578\tPersonal\tMr Des Smith\tSortCodeAccountNumber",
+                        "04140469124990\tBusiness\tMatrix Limited\tSortCodeAccountNumber",
+                        "04140459124221\tPersonal\tMrs Penny Jones\tSortCodeAccountNumber");
+
+        for (String value : inputList) {
+            if (value.contains(s)) {
+                return value;
+            }
+        }
+        return null;
+    }
 }
